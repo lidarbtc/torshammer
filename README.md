@@ -1,4 +1,4 @@
-# torshammer(
+# torshammer(educational only!)
 
 ## This is a maintained fork of Torshammer
 
