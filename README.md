@@ -2,6 +2,8 @@
 
 ## This is a maintained fork of Torshammer
 
+## not effective on nginx, only works with apache
+
 ## Usage on Ubuntu
 ```sh
 git clone https://github.com/lidarbtc/torshammer.git
