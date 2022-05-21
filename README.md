@@ -8,6 +8,8 @@
 ```sh
 git clone https://github.com/lidarbtc/torshammer.git
 
+cd torshammer
+
 pip install pysocks
 
 sudo apt install tor
