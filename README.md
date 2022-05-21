@@ -2,11 +2,13 @@
 
 ## This is a maintained fork of Torshammer
 
-## Usage on Linux
+## Usage on Ubuntu
 ```sh
 git clone https://github.com/lidarbtc/torshammer.git
 
 pip install pysocks
+
+sudo apt install tor
 
 ```
 
