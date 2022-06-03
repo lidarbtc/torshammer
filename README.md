@@ -4,7 +4,7 @@
 
 ## not effective on nginx, only works with apache
 
-## Usage on Ubuntu & debian
+## Usage on Ubuntu & Debian
 ```sh
 git clone https://github.com/lidarbtc/torshammer.git
 
