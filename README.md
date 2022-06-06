@@ -1,8 +1,6 @@
-# torshammer(educational only!)
+# torshammer only works with apache (educational only!)
 
 ## This is a maintained fork of Torshammer
-
-## not effective on nginx, only works with apache
 
 ## Usage on Ubuntu & Debian
 ```sh
