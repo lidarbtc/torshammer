@@ -507,13 +507,13 @@ class httpPost(Thread):
                     pass
  
 def usage():
-    print "./torshammer.py -t <target> [-r <threads> -p <port> -T -h]"
-    print " -t|--target <Hostname|IP>"
-    print " -r|--threads <Number of threads> Defaults to 256"
-    print " -p|--port <Web Server Port> Defaults to 80"
-    print " -T|--tor Enable anonymising through tor on 127.0.0.1:9050"
-    print " -h|--help Shows this help\n" 
-    print "Eg. ./torshammer.py -t 192.168.1.100 -r 256\n"
+    print("./torshammer.py -t <target> [-r <threads> -p <port> -T -h]")
+    print(" -t|--target <Hostname|IP>")
+    print(" -r|--threads <Number of threads> Defaults to 256")
+    print(" -p|--port <Web Server Port> Defaults to 80")
+    print(" -T|--tor Enable anonymising through tor on 127.0.0.1:9050")
+    print(" -h|--help Shows this help\n") 
+    print("Eg. ./torshammer.py -t 192.168.1.100 -r 256\n")
 
 def main(argv):
     
