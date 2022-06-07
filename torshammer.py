@@ -72,7 +72,7 @@ class httpPost(Thread):
                     self._send_http_post()
                 except Exception, e:
                     if e.args[0] == 32 or e.args[0] == 104:
-                        (print term.BOL+term.UP+term.CLEAR_EOL+"Thread broken, restarting..."+ term.NORMAL)
+                        print (term.BOL+term.UP+term.CLEAR_EOL+"Thread broken, restarting..."+ term.NORMAL)
                         self.socks = socks.socksocket()
                         break
                     time.sleep(0.1)
