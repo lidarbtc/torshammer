@@ -141,13 +141,13 @@ def main(argv):
                 t.running = False
 
 if __name__ == "__main__":
-    print "\n/*"
-    print " *"+term.RED + " Tor's Hammer "+term.NORMAL
-    print " * Slow POST DoS Testing Tool"
-    print " * lidarbtc@protonmail.com"
-    print " * Anon-ymized via Tor"
-    print " * We are Legion."
-    print " */\n"
+    print ("\n/*")
+    print (" *"+term.RED + " Tor's Hammer "+term.NORMAL)
+    print (" * Slow POST DoS Testing Tool")
+    print (" * lidarbtc@protonmail.com")
+    print (" * Anon-ymized via Tor")
+    print (" * We are Legion.")
+    print (" */\n")
 
     main(sys.argv[1:])
 
