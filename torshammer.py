@@ -45,7 +45,7 @@ class httpPost(Thread):
                 self.running = False
                 break
             p = random.choice(string.letters+string.digits)
-            print term.BOL+term.UP+term.CLEAR_EOL+"Posting: %s" % p+term.NORMAL
+            print (term.BOL+term.UP+term.CLEAR_EOL+"Posting: %s" % p+term.NORMAL)
             self.socks.send(p)
             time.sleep(random.uniform(0.1, 3))
 	
@@ -58,12 +58,12 @@ class httpPost(Thread):
                     if self.tor:
                         self.socks.setproxy(socks.PROXY_TYPE_SOCKS5, "127.0.0.1", 9050)
                     self.socks.connect((self.host, self.port))
-                    print term.BOL+term.UP+term.CLEAR_EOL+"Connected to host..."+ term.NORMAL
+                    print (term.BOL+term.UP+term.CLEAR_EOL+"Connected to host..."+ term.NORMAL)
                     break
                 except Exception, e:
                     if e.args[0] == 106 or e.args[0] == 60:
                         break
-                    print term.BOL+term.UP+term.CLEAR_EOL+"Error connecting to host..."+ term.NORMAL
+                    print (term.BOL+term.UP+term.CLEAR_EOL+"Error connecting to host..."+ term.NORMAL)
                     time.sleep(1)
                     continue
 	
@@ -72,7 +72,7 @@ class httpPost(Thread):
                     self._send_http_post()
                 except Exception, e:
                     if e.args[0] == 32 or e.args[0] == 104:
-                        print term.BOL+term.UP+term.CLEAR_EOL+"Thread broken, restarting..."+ term.NORMAL
+                        (print term.BOL+term.UP+term.CLEAR_EOL+"Thread broken, restarting..."+ term.NORMAL)
                         self.socks = socks.socksocket()
                         break
                     time.sleep(0.1)
@@ -119,11 +119,11 @@ def main(argv):
         usage()
         sys.exit(-1)
 
-    print term.DOWN + term.RED + "/*" + term.NORMAL
-    print term.RED + " * Target: %s Port: %d" % (target, port) + term.NORMAL
-    print term.RED + " * Threads: %d Tor: %s" % (threads, tor) + term.NORMAL
-    print term.RED + " * Give 20 seconds without tor or 40 with before checking site" + term.NORMAL
-    print term.RED + " */" + term.DOWN + term.DOWN + term.NORMAL
+    print (term.DOWN + term.RED + "/*" + term.NORMAL)
+    print (term.RED + " * Target: %s Port: %d" % (target, port) + term.NORMAL)
+    print (term.RED + " * Threads: %d Tor: %s" % (threads, tor) + term.NORMAL)
+    print (term.RED + " * Give 20 seconds without tor or 40 with before checking site" + term.NORMAL)
+    print (term.RED + " */" + term.DOWN + term.DOWN + term.NORMAL)
 
     rthreads = []
     for i in range(threads):
