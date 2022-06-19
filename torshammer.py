@@ -7,7 +7,6 @@ import math
 import getopt
 import socks
 import string
-import terminal
 
 from threading import Thread
 
