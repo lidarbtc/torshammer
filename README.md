@@ -1,8 +1,6 @@
-# torshammer only works with apache (educational only!)
+## This is a maintained fork of Torshammer 
 
-## This is a maintained fork of Torshammer
-
-## Usage on Ubuntu & Debian
+## Usage on Ubuntu & Debian (python3 support)
 ```sh
 git clone https://github.com/lidarbtc/torshammer.git
 
@@ -16,7 +14,7 @@ sudo apt install tor
 
 ## Example
 ```sh
-Use command line : python torshammer.py <target> <thread> <viator>
+Use command line : python3 torshammer.py <target> <thread> <viator>
       └──────────> python torshammer.py -t https://example.com 250 -T
 ```
 ## Contact Developer
