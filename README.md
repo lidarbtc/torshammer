@@ -12,6 +12,10 @@ This is a maintained fork of Torshammer
  <img src="https://img.shields.io/badge/Python-FFDD00?style=for-the-badge&logo=python&logoColor=blue"/></br>
 </div> 
 
+## This repository is under maintenance
+current this script isn't work!
+I will fix bug within a week.
+
 ## Usage on Ubuntu & Debian (python3 support)
 ```sh
 git clone https://github.com/lidarbtc/torshammer.git
