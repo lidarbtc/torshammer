@@ -82,7 +82,7 @@ def usage():
     print(" -p|--port <Web Server Port> Defaults to 80")
     print(" -T|--tor Enable anonymising through tor on 127.0.0.1:9050")
     print(" -h|--help Shows this help\n") 
-    print("Eg. ./torshammer.py -t 192.168.1.100 -r 256\n")
+    print("Eg. python3 torshammer.py -t 192.168.1.100 -r 256\n")
 
 def main(argv):
     
