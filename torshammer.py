@@ -76,7 +76,7 @@ class httpPost(Thread):
                     pass
  
 def usage():
-    print("./torshammer.py -t <target> [-r <threads> -p <port> -T -h]")
+    print("python3 torshammer.py -t <target> [-r <threads> -p <port> -T -h]")
     print(" -t|--target <Hostname|IP>")
     print(" -r|--threads <Number of threads> Defaults to 256")
     print(" -p|--port <Web Server Port> Defaults to 80")
