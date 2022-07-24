@@ -9,15 +9,12 @@ This is a maintained fork of Torshammer
 
 ## Language</br>
 
- <img src="https://img.shields.io/badge/Python-FFDD00?style=for-the-badge&logo=python&logoColor=blue"/></br>
-</div> 
+<img src="https://img.shields.io/badge/Python-FFDD00?style=for-the-badge&logo=python&logoColor=blue"/></br>
 
-## This repository is under maintenance
-current this script isn't work!
-
-I will fix bug within a week.
+</div>
 
 ## Usage on Ubuntu & Debian (python3 support)
+
 ```sh
 git clone https://github.com/lidarbtc/torshammer.git
 
@@ -30,11 +27,14 @@ sudo apt install tor
 ```
 
 ## Example
+
 ```sh
 Use command line : python3 torshammer.py <target> <thread> <viator>
       └──────────> python torshammer.py -t https://example.com 250 -T
 ```
+
 ## Contact Developer
+
 ```sh
  lidarbtc@protonmail.com
 ```
