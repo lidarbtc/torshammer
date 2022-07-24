@@ -30,7 +30,7 @@ sudo apt install tor
 
 ```sh
 Use command line : python3 torshammer.py <target>
-      └──────────> python torshammer.py https://example.com
+      └──────────> python torshammer.py example.com
 ```
 
 ## Contact Developer
