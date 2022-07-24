@@ -29,8 +29,8 @@ sudo apt install tor
 ## Example
 
 ```sh
-Use command line : python3 torshammer.py <target> <thread> <viator>
-      └──────────> python torshammer.py -t https://example.com 250 -T
+Use command line : python3 torshammer.py <target>
+      └──────────> python torshammer.py https://example.com
 ```
 
 ## Contact Developer
