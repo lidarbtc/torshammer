@@ -17,6 +17,11 @@ change port 9050 to 9150.
 
 </div>
 
+## Feture
+
+- user-agent spoofing
+- traffic anonymize via tor
+
 ## Usage on Ubuntu & Debian (python3 support)
 
 ```sh
@@ -33,8 +38,8 @@ sudo apt install tor
 ## Example
 
 ```sh
-Use command line : python3 torshammer.py <target>
-      └──────────> python3 torshammer.py example.com
+Use command line : python3 torshammer.py <target> <ratelimit>
+      └──────────> python3 torshammer.py example.com 1
 ```
 
 ## Contact Developer

