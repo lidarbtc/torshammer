@@ -7,6 +7,10 @@
  
 This is a maintained fork of Torshammer
 
+If you want to this with tor "browser" not "tor"
+
+change port 9050 to 9150.
+
 ## Language</br>
 
 <img src="https://img.shields.io/badge/Python-FFDD00?style=for-the-badge&logo=python&logoColor=blue"/></br>
