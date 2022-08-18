@@ -21,6 +21,7 @@ change port 9050 to 9150.
 
 - user-agent spoofing
 - traffic anonymize via tor
+- small traffic
 
 ## Usage on Ubuntu & Debian (python3 support)
 
