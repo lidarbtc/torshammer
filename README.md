@@ -9,7 +9,7 @@ This is a maintained fork of Torshammer
 
 If you want to use this with tor "browser" not "tor"
 
-change port 9050 to 9150.
+in torshammer.py change port 9050 to 9150.
 
 ## Language</br>
 
