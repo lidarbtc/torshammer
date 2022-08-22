@@ -22,6 +22,7 @@ in torshammer.py change port 9050 to 9150.
 - user-agent spoofing
 - traffic anonymize via tor
 - small traffic
+- http-post request
 
 ## Usage on Ubuntu & Debian (python3 support)
 
