@@ -13,7 +13,7 @@ def setupSocket(ip):
     sock = socks.socksocket(socket.AF_INET, socket.SOCK_STREAM)
     sock.settimeout(10)
     sock.connect((ip, 80))
-    sock.send("GET /?{} HTTP/2\r\n".format(random.randint(0, 1557)).encode("utf-8"))
+    sock.send("GET /?{} HTTP/2\r\n".format(random.randint(0, 1500)).encode("utf-8"))
 
     for header in headers:
         sock.send("{}\r\n".format(header).encode("utf-8"))
