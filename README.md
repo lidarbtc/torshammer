@@ -4,6 +4,7 @@
  <p>
  <img src="https://img.shields.io/github/stars/lidarbtc/torshammer?color=%23DF0067&style=for-the-badge"/> &nbsp;
  <img src="https://img.shields.io/github/forks/lidarbtc/torshammer?color=%239999FF&style=for-the-badge"/> &nbsp;
+ <img src="https://img.shields.io/github/license/lidarbtc/torshammer?color=%23E8E8E8&style=for-the-badge"/> &nbsp;
  
 This is a maintained fork of Torshammer
 
