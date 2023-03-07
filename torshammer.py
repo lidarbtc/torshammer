@@ -26,7 +26,7 @@ if __name__ == "__main__":
         sys.exit()
 
     ip = sys.argv[1]
-    count = 200
+    count = 150
     print("Starting DoS attack on {}. Connecting to {} sockets.".format(ip, count))
     print("wait until reach socket {}".format(count))
 
