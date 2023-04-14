@@ -11,8 +11,6 @@ This is a maintained fork of Torshammer
 If you want to use this with tor "browser" not "tor"
 
 in torshammer.py change port 9050 to 9150.
-  
-2022 11 22 : I will impove this script soon.
 
 ## Language</br>
 
