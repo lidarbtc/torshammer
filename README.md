@@ -23,6 +23,7 @@ in torshammer.py change port 9050 to 9150.
 - user-agent spoofing
 - traffic anonymize via tor
 - small traffic
+- works well for .onion website
 
 ## Usage on Ubuntu & Debian (python3 support)
 
@@ -40,9 +41,20 @@ sudo apt install tor
 ## Example
 
 ```sh
-Use command line : python3 torshammer.py <target> <ratelimit>
-      └──────────> python3 torshammer.py example.com 1
+Use command line : python3 torshammer.py <target>
+      └──────────> python3 torshammer.py example.com
 ```
+
+## Limits
+
+- It's not work on https(443) site; only http(80).
+- If server configuration is well and latest updated, it will not work.
+
+### Why?
+
+'Cause it's slowloris tool.
+
+I will develope get flood tool with Tor. - It should work for every website.
 
 ## Contact Developer
 
