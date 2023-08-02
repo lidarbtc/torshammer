@@ -18,7 +18,7 @@ in torshammer.py change port 9050 to 9150.
 
 </div>
 
-## Feture
+## Features
 
 - user-agent spoofing
 - traffic anonymize via tor
@@ -47,8 +47,9 @@ Use command line : python3 torshammer.py <target>
 
 ## Limits
 
-- It's not work on https(443) site; only http(80).
+- It's does not work on https(443) site; only http(80).
 - If server configuration is well and latest updated, it will not work.
+- This is a very old proof of concept, it will not work on modern websites.
 
 ### Why?
 
